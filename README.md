@@ -4,6 +4,8 @@ A single-player oTree experiment that elicits willingness to pay for an appeal u
 
 To run: `pip install otree`, then `otree devserver`.
 
-![Instructions](screenshots/instructions.png)
-![Decision](screenshots/decision.png)
-![Result](screenshots/result.png)
+![Instructions](screenshots/Instructions.png)
+
+![Decision](screenshots/Decision.png)
+
+![Result](screenshots/Result.png)
