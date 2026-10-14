@@ -1,0 +1,23 @@
+{{ block title }}
+    Results
+{{ endblock }}
+{{ block content }}
+
+    <p>You stated {{ player.bid }}. The computer drew a price of {{ player.price }}.</p>
+
+    {{ if player.bought_appeal }}
+        <p>Your stated amount was at least the price, so you paid
+        {{ player.price }} and your appeal was heard.</p>
+        {{ if player.appeal_won }}
+            <p>The ruling was reversed. You received {{ C.PRIZE }}.</p>
+        {{ else }}
+            <p>The ruling was upheld.</p>
+        {{ endif }}
+    {{ else }}
+        <p>Your stated amount was below the price, so you paid nothing and
+        there was no appeal.</p>
+    {{ endif }}
+
+    <p>Your total payoff is <b>{{ player.payoff }}</b>.</p>
+
+{{ endblock }}

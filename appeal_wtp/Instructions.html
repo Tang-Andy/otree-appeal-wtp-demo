@@ -1,0 +1,33 @@
+{{ block title }}
+    Instructions
+{{ endblock }}
+{{ block content }}
+
+    <p>You start this study with {{ C.ENDOWMENT }}.</p>
+
+    <p>You also had a claim worth {{ C.PRIZE }}. An initial reviewer has ruled
+    against you, so you will not receive it unless the ruling is overturned.</p>
+
+    <p>You may buy an appeal. If your appeal is heard, the ruling will be
+    reversed with probability {{ player.reversal_pct }}%, and you will receive
+    the {{ C.PRIZE }}.</p>
+
+    <p><b>How the price is set.</b> On the next page, you will state the most you
+    are willing to pay for an appeal, between 0 and {{ C.MAX_PRICE }} points. The
+    computer will then draw a random price between 0 and {{ C.MAX_PRICE }} points,
+    with every whole number equally likely.</p>
+
+    <ul>
+        <li>If your stated amount is at least the price, you pay the price (not
+        your stated amount) and your appeal is heard.</li>
+        <li>If your stated amount is below the price, you pay nothing and there
+        is no appeal.</li>
+    </ul>
+
+    <p>Because what you pay never depends on the amount you state, your best
+    strategy is to state exactly what an appeal is worth to you.</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

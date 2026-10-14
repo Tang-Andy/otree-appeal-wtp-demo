@@ -1,0 +1,12 @@
+{{ block title }}
+    Your Decision
+{{ endblock }}
+{{ block content }}
+
+    <p>If your appeal is heard, the ruling is reversed with probability
+    {{ player.reversal_pct }}% and you receive {{ C.PRIZE }}.</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}
