@@ -2,12 +2,6 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
-        name='my_survey',
-        display_name='My Survey',
-        app_sequence=['my_survey'],
-        num_demo_participants=1,
-    ),
-    dict(
         name='appeal_wtp',
         display_name='Appeal WTP (BDM)',
         app_sequence=['appeal_wtp'],
